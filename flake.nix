@@ -13,7 +13,11 @@
         rust = pkgs.rust-bin.stable.latest.default;
       in {
         devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [ rust pkg-config ];
+          buildInputs = with pkgs; [
+            rust
+            pkg-config
+            gnumake
+            ];
         };
       }
     );
